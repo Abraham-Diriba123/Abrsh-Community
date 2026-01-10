@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Premium</title><link href="style.css" rel="stylesheet"/><script defer="" src="script.js"></script>
+<style>
+/* General mobile fixes */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav, .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a, .navbar a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  border-radius: 5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button, .btn, input[type=submit] {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .quick-picks, .products, .container {
+    padding: 10px;
+  }
+
+  nav, .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+</head><body><div class="container"><header><div class="logo-row"><img alt="logo" src="assets/banner-1.png"/><div class="brand">Abrsh Community</div></div><nav><a href="index.html">Home</a><a href="diamonds.html">Diamonds</a><a href="uc.html">UC</a><a href="premium.html">Premium</a><a href="contact.html">Contact</a><a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a></nav></header><main><section class="section"><h2>Telegram Premium</h2><div class="grid">
+<div class="card"><h4>1 Month</h4><p>700 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 1 Month',700)">Add to Cart</button></div>
+<div class="card"><h4>3 Months</h4><p>2450 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 3 Months',2450)">Add to Cart</button></div>
+<div class="card"><h4>6 Months</h4><p>3050 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 6 Months',3050)">Add to Cart</button></div>
+<div class="card"><h4>12 Months</h4><p>5350 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 12 Months',5350)">Add to Cart</button></div>
+</div></section></main></div></body></html>
