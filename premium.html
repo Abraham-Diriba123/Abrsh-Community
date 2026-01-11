@@ -1,209 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Abrsh Community – Premium</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-    }
+<html lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Premium</title><link href="style.css" rel="stylesheet"/><script defer="" src="script.js"></script>
+<style>
+/* General mobile fixes */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 15px;
-    }
+nav, .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
-    /* HEADER */
-    header {
-      border-bottom: 1px solid #222;
-      margin-bottom: 25px;
-    }
+nav a, .navbar a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  border-radius: 5px;
+}
 
-    .logo-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 0;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-    .logo-row img {
-      height: 45px;
-    }
+button, .btn, input[type=submit] {
+  padding: 10px 15px;
+  font-size: 16px;
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: bold;
-    }
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.4em;
+    text-align: center;
+  }
 
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 10px;
-    }
+  .quick-picks, .products, .container {
+    padding: 10px;
+  }
 
-    .navbar a {
-      color: #ccc;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  nav, .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
 
-    .navbar a:hover {
-      color: #00ffcc;
-    }
-
-    /* PRODUCTS */
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #111;
-      border: 1px solid #222;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .card h4 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-
-    .card p {
-      font-size: 18px;
-      color: #00ffcc;
-    }
-
-    .btn {
-      margin-top: 15px;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      background: #00ffcc;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #00cfa8;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-      border-top: 1px solid #222;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .brand {
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-
-    <!-- HEADER -->
-    <header>
-      <div class="logo-row">
-        <img src="banner-1.png" alt="logo">
-        <div class="brand">Abrsh Community</div>
-      </div>
-
-      <!-- FULL NAV -->
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="diamonds.html">Diamonds</a>
-        <a href="uc.html">UC</a>
-        <a href="premium.html">Premium</a>
-        <a href="contact.html">Contact</a>
-        <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
-      </nav>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main>
-      <h2>Telegram Premium</h2>
-
-      <div class="products">
-        <div class="card">
-          <h4>1 Month</h4>
-          <p>700 ETB</p>
-          <button class="btn" onclick="addToCart('Telegram Premium 1 Month', 700)">
-            Add to Cart
-          </button>
-        </div>
-
-        <div class="card">
-          <h4>3 Months</h4>
-          <p>2450 ETB</p>
-          <button class="btn" onclick="addToCart('Telegram Premium 3 Months', 2450)">
-            Add to Cart
-          </button>
-        </div>
-
-        <div class="card">
-          <h4>6 Months</h4>
-          <p>3050 ETB</p>
-          <button class="btn" onclick="addToCart('Telegram Premium 6 Months', 3050)">
-            Add to Cart
-          </button>
-        </div>
-
-        <div class="card">
-          <h4>12 Months</h4>
-          <p>5350 ETB</p>
-          <button class="btn" onclick="addToCart('Telegram Premium 12 Months', 5350)">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      © 2026 Abrsh Community • Fast & Secure Digital Services
-    </footer>
-
-  </div>
-
-  <!-- SCRIPT -->
-  <script>
-    let cartCount = 0;
-
-    function addToCart(product, price) {
-      cartCount++;
-      document.getElementById("cart-count").innerText = cartCount;
-      alert(product + " added to cart\nPrice: " + price + " ETB");
-    }
-  </script>
-
-</body>
-</html>
+</head><body><div class="container"><header><div class="logo-row"><<img alt="logo" src="./banner-1.png"><div class="brand">Abrsh Community</div></div><nav><a href="index.html">Home</a><a href="diamonds.html">Diamonds</a><a href="uc.html">UC</a><a href="premium.html">Premium</a><a href="contact.html">Contact</a><a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a></nav></header><main><section class="section"><h2>Telegram Premium</h2><div class="grid">
+<div class="card"><h4>1 Month</h4><p>700 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 1 Month',700)">Add to Cart</button></div>
+<div class="card"><h4>3 Months</h4><p>2450 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 3 Months',2450)">Add to Cart</button></div>
+<div class="card"><h4>6 Months</h4><p>3050 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 6 Months',3050)">Add to Cart</button></div>
+<div class="card"><h4>12 Months</h4><p>5350 ETB</p><button class="btn" onclick="addToCart('Telegram Premium 12 Months',5350)">Add to Cart</button></div>
+</div></section></main></div></body></html>
